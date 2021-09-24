@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+:root {
+    --primary-color : rgb(18, 22, 233);
+}
+html{
+    max-width :96%;
+    overflow-x : hidden;
+    // overflow-y : hidden;
+}
+
+body {
+    width : 100%;
+    background : rgb(99, 98, 98);
+    font-family : 'Poppins';
+}
+
+a{
+  color : var(--primary-color);  
+}
+
+ul{
+    list-style-type: none;
+    margin : 0;
+    padding : 0;
+}
+
+section {
+    padding : 5em 4em;
+}
+
+h2{
+    font-size : 5em;
+    text-align : center;
+}
+
+label{
+    display : block;
+    font-size : 1em;
+    margin-bottom : .5em;
+}
+
+input, textarea{
+    width : 100%;
+    padding : 0.8em;
+    margin-bottom : 1em;
+    border-radius : 5px;
+    border : 1px solid gray;
+    box-sizing : border-box;
+}
+
+input[type="submit"]{
+    background-color : var(--primary-color);
+    color : white;
+    font-weight : bold;
+    font-size : 1.3em;
+    border : none;
+    margin-bottom : 5em;
+    border-radius : 10px;
+    display : inline-block;
+    padding : 0.8em 2em;
+    width : unset;
+    cursor : pointer;
+}
+
+iframe{
+    width : 100%;
+    height : 300px;
+}
+
+
+
+#mobile-menu{
+    width : 30px;
+}
+
+#mobile-exit{
+    width : 20px;
+    margin : 0.1em;
+    float : right;
+    cursor : pointer;
+}
+
+#video-camera{
+    width : 20px;
+}
+
+.navbar{
+    background : white;
+    padding : 1em;
+    width : 100%;
+    align-items: center;
+
+    .logo{
+        text-decoration : none;
+        font-weight : 700;
+        color : black;
+        font-size : 2em;
+    }
+    span{
+        color : var(--primary-color);
+    }
+    nav{
+        display : none;
+    }
+
+    .container{
+        display : flex;
+        place-content : space-between;
+
+    }
+    .mobile-menu{
+        cursor : pointer;
+        margin : 10px;
+        padding : 0;
+    }
+    
+}
+
+nav.menu_btn{
+    display : block;
+}
+
+nav{
+    position : fixed;
+    z-index : 999;
+    width : 25%;
+    right : 0;
+    top : 0;
+    padding : 1em;
+    background :rgb(206, 237, 6);
+    height : 100vh;
+    .primary-nav{
+        margin-top: 3em;
+    }
+    li{
+        margin : 0.5em 0 0.5em 0;
+        a{
+            text-decoration : none;
+            color : black;
+            display : block;
+            padding : 0.5em;
+            font-size : 1em;
+            text-align : right;
+            &:hover{
+                font-weight : bold;
+                font-size : 1.2em;
+                color :rgb(99, 99, 102);
+            }
+        }
+    }
+}
+
+nav.menu_btn{
+    display : block;
+}
+
+.hero-img{
+    width : 70%;
+    margin-top : 3em;
+}
+
+section.features-section{
+    background : rgb(82, 101, 104);
+    color : white;
+}
+
+ul.features-list{
+    margin : 0;
+    padding-left : 0.1em;
+    display : grid;
+    grid-template-columns : repeat(auto-fit, minmax(19ren, 1fr));
+
+    li{
+         font-size : 1.1em;
+         margin-bottom : 1em;
+         margin-left : 2em;
+         position : relative;
+
+         &:before{
+             content : '';
+             left: -2em;
+             position : absolute;
+             width : 20px;
+             height : 20px;
+             background-image : url('../images/checked.svg');
+             background-size : contain;
+             margin-right : 0.5em;
+         }
+    }
+}
+
+.testimonials-section{
+    background: var(--primary-color);
+    color : white;
+    li{
+        background : rgb(13, 13, 78);
+        text-align : center;
+        padding : 2em 1em;
+        width : 80%;
+        margin : 0 auto 5em auto;
+        border-radius : 1em;
+        img{
+            width : 100px;
+            border : 5px solid rgb(13, 13, 78);
+            border-radius : 50%;
+            margin-top : -5em;
+        }
+    }
+}
+
+@media only screen and (min-width : 750px){
+    .mobile-menu, .mobile-menu-exit{
+        display : none;
+    }
+    .navbar .container{
+        display : grid;
+        grid-template-columns : 180px auto;
+    }
+    
+    .navbar nav{
+        display : flex;
+        justify-content : space-between;
+        background : none;
+        position : unset;
+        height : auto;
+        width : 100%;
+        padding : 0;
+        font-size : 10px;
+        ul{
+            display : flex;
+            
+        }
+        a{
+            color : black;
+            font-size : 1em;
+            padding : .1em 1em;
+        }
+        ul.primary-nav{
+            margin-top : 0;
+            padding-top : 8px;
+            margin-right : 10em;
+            
+        }
+        ul.secondary-nav{
+            padding-top : 8px;
+        }
+        li.current a{
+            font-weight : bold;
+        }
+        li.go-premium-cta a{
+            background : white;
+            border : 2px solid var(--primary-color);
+            color : var(--primary-color);
+            border-radius : 5px;
+            font-weight : bold;
+        }
+    }
+}
+
+

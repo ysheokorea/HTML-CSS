@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+:root {
+  --primary-color: rgb(18, 22, 233);
+}
+
+html {
+  max-width: 96%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  background: #636262;
+  font-family: 'Poppins';
+}
+
+a {
+  color: var(--primary-color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 4em;
+}
+
+h2 {
+  font-size: 5em;
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: .5em;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+
+#mobile-menu {
+  width: 30px;
+}
+
+#mobile-exit {
+  width: 20px;
+  margin: 0.1em;
+  float: right;
+  cursor: pointer;
+}
+
+#video-camera {
+  width: 20px;
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  font-size: 2em;
+}
+
+.navbar span {
+  color: var(--primary-color);
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
+  margin: 10px;
+  padding: 0;
+}
+
+nav.menu_btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 25%;
+  right: 0;
+  top: 0;
+  padding: 1em;
+  background: #ceed06;
+  height: 100vh;
+}
+
+nav .primary-nav {
+  margin-top: 3em;
+}
+
+nav li {
+  margin: 0.5em 0 0.5em 0;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 0.5em;
+  font-size: 1em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #636366;
+}
+
+nav.menu_btn {
+  display: block;
+}
+
+.hero-img {
+  width: 70%;
+  margin-top: 3em;
+}
+
+section.features-section {
+  background: #526568;
+  color: white;
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: 0.1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19ren, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19ren, 1fr));
+}
+
+ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+ul.features-list li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/checked.svg");
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+.testimonials-section {
+  background: var(--primary-color);
+  color: white;
+}
+
+.testimonials-section li {
+  background: #0d0d4e;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+
+.testimonials-section li img {
+  width: 100px;
+  border: 5px solid #0d0d4e;
+  border-radius: 50%;
+  margin-top: -5em;
+}
+
+@media only screen and (min-width: 750px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    font-size: 10px;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: .1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin-top: 0;
+    padding-top: 8px;
+    margin-right: 10em;
+  }
+  .navbar nav ul.secondary-nav {
+    padding-top: 8px;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.go-premium-cta a {
+    background: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=main_clone.css.map */
